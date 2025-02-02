@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( CircleDetect )
+find_package( OpenCV REQUIRED )
+add_executable( circle_detect circle_detect.cpp )
+target_link_libraries( circle_detect ${OpenCV_LIBS} )
