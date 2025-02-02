@@ -4,35 +4,51 @@ This is a sample OpenCV program running on Renesas RZ/G2L used to detect circles
 
 ## 1. Environment
 
-Download both the RZ/V2H and RZ/G2L Yocto projects, 
+Download both the RZ/V2H and RZ/G2L BSP Yocto projects, 
  
 Copy the OpenCV recipes from RZ/V2H project to RZ/G2L project. 
 
-![](https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png?raw=true)
+From RZ/V2H : meta-openembedded/meta-oe/recipe-support/opencv
 
-Build Yocto project
+To RZ.G2L : 
+
+meta-renesas/meta-rz-common/recipes-graphics/opencv
+
+![](https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png?raw=true)
+<img src="https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png" width="400px">
+
+Modify meta-renesas/meta-rz-common/include/
+core-image-bsp.inc 
+Add the below, 
+```
+IMAGE_INSTALL_append = " \
+    opencv \
+```
+
+
+**Build Yocto project**
 
 ```
 MACHINE=smarc-rzg2l bitbake core-image-qt
 ```
 
-Write the Linux image to the SD card.
+**Write to SD card**
 
 ```
 sudo bmaptool copy core-image-qt-smarc-rzg2l.wic.gz /dev/sdc
 ```
 
-Build Yocto project with extra paramters for SDK
+**Build SDK**
 
 ```
 MACHINE=smarc-rzg2l bitbake core-image-qt -c populate_sdk
 ```
 
-Run the above bash script to install the SDK toolkits on your host computer
+Run the above bash script to **install the SDK toolkits** on your host computer
 
 <work_dir>/build/tmp/deploy/sdk/poky-glibc-x86_64-core-image-qt-aarch64-smarc-rzg2l-toolchain-3.1.31.sh
 
-The SDK will by default be installed to 
+The SDK will be installed to ( by default ) 
 
 ```
 /opt/poky/3.1.31
