@@ -14,9 +14,7 @@ To RZ.G2L :
 
 meta-renesas/meta-rz-common/recipes-graphics/opencv
 
-![](https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png?raw=true)
 ![](images/ImageInstallAppend.png?raw=true)
-<img src="https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png" width="500px">
 
 Modify meta-renesas/meta-rz-common/include/
 core-image-bsp.inc 
@@ -108,5 +106,5 @@ cd /home/root
 ```
 ## 4. Result 
 
-
-
+[![](images/circle_detect01.png)](https://youtu.be/UsFkTGlTTKw)
+[![](images/circle_detect02.png)](https://youtu.be/iUK23yD4CAY)
