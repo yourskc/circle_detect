@@ -15,7 +15,8 @@ To RZ.G2L :
 meta-renesas/meta-rz-common/recipes-graphics/opencv
 
 ![](https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png?raw=true)
-<img src="https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png" width="400px">
+![](images/ImageInstallAppend.png?raw=true)
+<img src="https://github.com/yourskc/circle_detect/blob/main/images/ImageInstallAppend.png" width="500px">
 
 Modify meta-renesas/meta-rz-common/include/
 core-image-bsp.inc 
