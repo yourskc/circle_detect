@@ -34,7 +34,7 @@ int main() {
 
         // Output the number of circles detected
         cout << "Detected circles: " << circles.size() << endl;
-    /*    
+        /*    
         for (size_t i = 0; i < circles.size(); i++) {
             cv::Vec3f c = circles[i];
             std::cout << "Circle " << i + 1 << ": (" << c[0] << ", " << c[1] << ") Radius: " << c[2] << std::endl;
@@ -45,7 +45,7 @@ int main() {
             cv::circle(frame, center, radius, cv::Scalar(0, 255, 0), 2);
             cv::circle(frame, center, 2, cv::Scalar(0, 0, 255), 3);
         }
-*/
+        */
         // Display the frame
         // cv::imshow("Circle Detection", frame);
 
