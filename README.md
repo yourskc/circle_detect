@@ -106,7 +106,7 @@ cd /home/root
 ```
 ## 4. Result 
 
-( click to play the video )
+( click to play )
 [![](images/circle_detect01.png)](https://youtu.be/UsFkTGlTTKw)
-( click to play the video )
+( click to play )
 [![](images/circle_detect02.png)](https://youtu.be/iUK23yD4CAY)
