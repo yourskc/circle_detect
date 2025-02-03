@@ -4,26 +4,13 @@ This is a sample OpenCV program running on Renesas RZ/G2L used to detect circles
 
 ## 1. Environment
 
-Download both the RZ/V2H and RZ/G2L BSP Yocto projects, 
- 
-Copy the OpenCV recipes from RZ/V2H project to RZ/G2L project. 
+Add the below few lines to build/conf/local.conf in the RZ/G2L Yocto Project 
 
-From RZ/V2H : meta-openembedded/meta-oe/recipe-support/opencv
-
-To RZ.G2L : 
-
-meta-renesas/meta-rz-common/recipes-graphics/opencv
-
-![](images/ImageInstallAppend.png?raw=true)
-
-Modify meta-renesas/meta-rz-common/include/
-core-image-bsp.inc 
-Add the below, 
 ```
-IMAGE_INSTALL_append = " \
-    opencv \
+IMAGE_INSTALL_append = " opencv opencv-dev "
+PACKAGECONFIG_append_pn-opencv = " gtk "
+PACKAGECONFIG_append_pn-nativesdk-opencv = " gtk "
 ```
-
 
 **Build Yocto project**
 
